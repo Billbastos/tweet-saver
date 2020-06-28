@@ -1,0 +1,88 @@
+.TweetBox {
+    display: flex;
+    flex-flow: column;
+    margin: 10px 50px 0 0;
+    padding: 0 50px 0 0;
+    min-width: 45%;
+    position: relative;
+}
+
+.TweetBox-content-after {
+    text-align: center;
+    position: absolute;
+    right: -40px;
+    top: 45%;
+    color: #55b8f5;
+}
+
+.TweetBox-content-after-icon {
+    font-size: 45px;
+}
+
+.TweetBox-header {
+    min-height: 40px;
+}
+
+.TweetBox-content {
+    background-color: white;
+    padding: 2px;
+    margin-top: 20px;
+    min-height: 140px;
+    flex-grow: 2;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+
+.TweetBox-search {
+	display: flex;
+}
+
+.TweetBox-search input {
+	padding: 5px 10px;
+	width: 100%;
+	border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #1da1f2;
+    font-size: 1.1rem;
+}
+
+.TweetBox-search button {
+    color: white;
+    padding: 10px 15px; 
+    background: #1da1f2; 
+    border: 0 none;
+	cursor:pointer;
+	margin-left: 10px;
+	border-radius: 0;
+    font-size: 15px;
+}
+
+.TweetBox-search button:focus,
+.TweetBox-search button:hover {
+    background: #005fd1;
+    border-radius: 0;
+}
+
+.TweetBox-loading {
+    color: #1da1f2;
+    opacity: .5;
+    font-size: 50px;
+    margin: auto;
+    padding: 100px;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}

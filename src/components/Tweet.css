@@ -1,0 +1,59 @@
+.Tweet {
+    background-color: #d6eefd;
+    padding: 10px;
+    border: 2px solid white;
+    min-height: 80px;
+}
+
+.Tweet:active {
+    opacity: .9;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.1);
+}
+
+.Tweet-container {
+    display: flex;
+}
+
+.Tweet-image {
+    padding-right: 10px;
+}
+
+.Tweet-image img {
+    border-radius: 100%;
+}
+
+.Tweet-content {
+    font-size: .8rem;
+    width: 100%;
+}
+
+.Tweet-content-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.Tweet-content-header-name {
+    font-weight: 700;
+    padding-right: 5px;
+}
+
+.Tweet-content-header-date {
+    text-align: right;
+    flex-grow: 1;
+}
+
+.Tweet-content-header-remove {
+    color: #172b4d;
+    text-align: right;
+    padding: 0 0 5px 5px;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.Tweet-content-message {
+    display: flex;
+    align-content: stretch;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}

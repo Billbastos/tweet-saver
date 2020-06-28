@@ -1,0 +1,22 @@
+.SavedTweets {
+    display: flex;
+    flex-flow: column;
+    margin: 10px 50px 0 0;
+    min-width: 45%;
+}
+
+.SavedTweets-header {
+    min-height: 40px;
+}
+
+.SavedTweets-header h2 {
+    margin: 0 auto;
+}
+
+.SavedTweets-content {
+    background-color: white;
+    padding: 2px;
+    margin-top: 20px;
+    flex-grow: 2;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2); 
+}

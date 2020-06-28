@@ -1,0 +1,26 @@
+.TweetSaver-header {
+    background-color: #1da1f2;
+    color: white;
+    padding: 10px 20px 30px;
+}
+
+.TweetSaver-header h1 {
+    color: white;
+    padding-top: 20px;
+}
+
+.TweetSaver-header-icon {
+    padding-left: 10px;
+}
+
+.TweetSaver-header-autor {
+    font-size: 0.8rem;
+}
+
+.TweetSaver-content {
+    margin: 20px;
+}
+
+.TweetSaver-tweetbox {
+    display: flex;
+}
