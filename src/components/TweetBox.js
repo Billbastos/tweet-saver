@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faCircleNotch, faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { Droppable } from 'react-beautiful-dnd'
-import Tweet from './Tweet'
-import tweets from '../services/TweetsService'
-import Helper from '../util/Helper'
-import './TweetBox.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faCircleNotch, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Droppable } from 'react-beautiful-dnd';
+import Tweet from './Tweet';
+import tweets from '../services/TweetsService';
+import Helper from '../util/Helper';
+import './TweetBox.css';
 
 class TweetBox extends Component {
     

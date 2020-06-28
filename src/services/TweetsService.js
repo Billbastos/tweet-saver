@@ -1,4 +1,4 @@
-import {model} from './TweetModel'
+import {model} from './TweetModel';
 import fetchJsonp from 'fetch-jsonp';
 
 class TweetsService {
@@ -25,7 +25,6 @@ class TweetsService {
                 return [];
             });
     }
-
 }
 
 export default (function getInstance() {

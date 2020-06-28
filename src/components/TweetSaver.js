@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import TweetBox from './TweetBox'
-import SavedTweets from './SavedTweets'
-import storageService from '../services/LocalStorageService'
-import { DragDropContext } from 'react-beautiful-dnd'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import './TweetSaver.css'
+import TweetBox from './TweetBox';
+import SavedTweets from './SavedTweets';
+import storageService from '../services/LocalStorageService';
+import { DragDropContext } from 'react-beautiful-dnd';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import './TweetSaver.css';
 
 class TweetSaver extends Component {
 
@@ -27,7 +27,7 @@ class TweetSaver extends Component {
     }
 
     updateLeftState(data) {
-        this.setState({left: data})
+        this.setState({left: data});
     }
 
     removeItem(itemId) {

@@ -10,10 +10,3 @@ export const model = (id, img, name, screenName, date, message) => {
             message: message
         }
 }
-
-export const columns = (id, tasks) => {
-    return {
-        id: id,
-        taskIds: tasks
-    }
-}

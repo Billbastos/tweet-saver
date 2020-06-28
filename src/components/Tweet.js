@@ -1,16 +1,10 @@
 import React, {Component} from 'react';
-import storageService from '../services/LocalStorageService'
 import { Draggable } from 'react-beautiful-dnd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import './Tweet.css';
 
 class Tweet extends Component {
-
-    removeItem(event) {
-        const itemId = event.target.id.replace('_', '');
-        storageService.remove(itemId);
-    }
 
     remove(id) {
         this.props.remove(id);
