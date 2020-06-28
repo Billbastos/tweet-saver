@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faCircleNotch, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 import { Droppable } from 'react-beautiful-dnd';
+import AlertModal from './AlertModal';
 import Tweet from './Tweet';
 import tweets from '../services/TweetsService';
 import Helper from '../util/Helper';
@@ -14,8 +15,10 @@ class TweetBox extends Component {
         this.state = { 
             tweets: [],
             isLoading: false,
-            searchValue: ''
+            searchValue: '',
+            errorMessage: ''
         };
+        this.alertModalElement = React.createRef();
         this.handleChange = this.handleChange.bind(this);
         this.loadTweets = this.loadTweets.bind(this);
     }
@@ -39,9 +42,14 @@ class TweetBox extends Component {
             this.setState({isLoading: true});
             tweets.get(searchValue)
                 .then((data) => {
-                    this.setState({tweets: data, isLoading: false });
+                    this.setState({tweets: data, isLoading: false, errorMessage: '' });
                     this.sendTweets(data);
-                }) 
+                    this.alertModalElement.current.closeModal();
+                })
+                .catch(e => {
+                    this.setState({tweets: [], isLoading: false, errorMessage: e });
+                    this.alertModalElement.current.openModal();
+                });
         }
     }
 
@@ -85,15 +93,11 @@ class TweetBox extends Component {
                                         message={t.message} />
                                 )}
                                 { provided.placeholder }
-                                <div className="TweetBox-content-after">
-                                    <div>Drag tweets</div>
-                                    <FontAwesomeIcon className="TweetBox-content-after-icon" icon={faArrowRight} />
-                                    <div>To save</div>
-                                </div>
                             </div>
                         )}
                     </Droppable>
                 }
+                <AlertModal ref={this.alertModalElement} message={this.state.errorMessage} />
             </div>
         )
     }

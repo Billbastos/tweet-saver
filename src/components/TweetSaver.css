@@ -21,6 +21,18 @@
     margin: 20px;
 }
 
+.TweetSaver-content-after {
+    text-align: center;
+    align-self: center;
+    color: #55b8f5;
+    margin: 0 25px;
+    min-width: 80px;
+}
+
+.TweetSaver-content-after-icon {
+    font-size: 45px;
+}
+
 .TweetSaver-tweetbox {
     display: flex;
 }

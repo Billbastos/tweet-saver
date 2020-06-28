@@ -21,8 +21,7 @@ class TweetsService {
                 })
             })
             .catch(function(ex) {
-                console.error('parsing failed', ex);
-                return [];
+                throw ex;
             });
     }
 }

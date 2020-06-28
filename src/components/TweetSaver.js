@@ -5,6 +5,7 @@ import storageService from '../services/LocalStorageService';
 import { DragDropContext } from 'react-beautiful-dnd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './TweetSaver.css';
 
 class TweetSaver extends Component {
@@ -86,6 +87,11 @@ class TweetSaver extends Component {
                     >
                         <div className="TweetSaver-tweetbox">
                             <TweetBox ref={this.tweetBoxElement} sendTweets={this.updateLeftState}/>
+                            <div className="TweetSaver-content-after">
+                                <div>Drag tweets</div>
+                                <FontAwesomeIcon className="TweetSaver-content-after-icon" icon={faArrowRight} />
+                                <div>To save</div>
+                            </div>
                             <SavedTweets tweets={this.state.right} remove={this.removeItem}/>
                         </div>
                     </DragDropContext>
